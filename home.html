@@ -1,0 +1,455 @@
+<!-- https://drive.google.com/drive/folders/1yUTvygoUT1Qvpk3Ummp_SV-2J0ZdpbRA -->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- FontAwesome Kit -->
+    <script src="https://kit.fontawesome.com/081bacb86f.js" crossorigin="anonymous"></script> 
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+    <title>Ozone Health Clinic</title>
+    <link rel="icon" href="addon/temptlocation.jpg" type="image/gif" >
+    
+    <style>
+    .site-heading{
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .fab:hover{
+      transform: scale(1.3);
+
+    }
+
+    .site-navbar {
+      box-sizing: border-box;
+      background-color: #0078bf;
+      display: flex;
+      justify-content: center;
+    }
+
+    .nav-item{
+      color: white;
+      margin: 3px 7px 3px 7px;
+      border: 1px solid transparent;
+
+    }
+    .nav-item:hover{
+      color: white;
+      text-decoration: none;
+      border-bottom: 1px solid white;
+    }
+
+    .slider-heading{
+      position: relative;
+      top:40%;
+      left:50px;
+      font-size: 4rem;
+      font-family: serif;
+    }
+
+    .main-actionbar{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding-left: 3rem;
+      padding-right: 3rem;
+      
+      
+    }
+    .listmain1{
+      /* background-color: #0078bf; */
+      border: 2px solid #0078bf;
+      text-align: center;
+      display: flex;
+      /* border:transparent; */
+      padding-bottom: 10px;
+      padding: 5px 10px 10px 10px;
+      border-radius: 5px;
+      /* box-shadow: 1px 1px 35px #005588; */
+
+      margin-top: 4rem;
+      margin-bottom: 4rem;
+
+      padding: 2rem;
+
+      flex:1;
+      width: 300px;
+      max-width: 550px;
+      margin-left: 2rem;
+      margin-right:2rem;
+
+
+      justify-content: space-between;
+      flex-wrap: wrap;
+      flex-direction: column;
+    
+    }
+
+    .listmain1 span{
+      font-size: x-large;
+    }
+
+    .listmain1 a button{
+      margin-top: 1rem;
+      padding: 1rem;
+      background-color: #0078bf;
+      border:none;
+      color:white;
+      border: 1px solid transparent;
+    }
+
+    .listmain1 a button:hover{
+      background-color: white;
+      color: #0078bf;
+      border: 1px solid #0078bf;
+    }
+
+
+    .main-gallery{
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .gallery-ex{
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      flex-direction: column;
+      
+
+      flex:1;
+      width: 300px;
+      max-width: 400px;
+      margin: 1rem;
+    }
+
+    .vbar{
+      content: " ";
+      width: 3px;
+      background-color: #0078bf;
+
+    }
+
+
+    .main-content{
+
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      flex-direction: row;
+    }
+
+    .content2{
+   
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+      padding: 2rem;
+    }
+
+
+    footer{
+      display: flex;
+      justify-content: center;
+    }
+
+    @media (screen < 400){
+      
+    }
+
+
+    </style>
+  </head>
+  <body style="overflow-x: hidden;" onscroll="check()">
+    <div class="site-wrapper" style="overflow-x: hidden;">
+      <div class="site-heading">
+        <div class="left-header">
+          <img src="addon/temptlocation.jpg" alt="" style="height:50px;">
+          <span>OZONE HEALTH CLINICS</span>
+        </div>
+        <div class ="right-header">
+          <p style="cursor:default">
+          <a  href="https://www.facebook.com"><i class="fab fa-facebook" style="color:blue"></i></a>
+          <a  href="https://www.mail.google.com"><i class="fab fa-google" style="color:red"></i></a>
+          <a  href="https://www.twitter.com"><i class="fab fa-twitter"></i></a>
+          <a  href="https://www.linkdin.com"><i class="fab fa-linkedin-in" style="color:blueviolet"></i></a>
+          &nbsp;&nbsp;
+          </p>
+        </div>
+      </div>
+      <div class="site-navbar" style="padding:4px;font-size:larger">
+            <a class="nav-item" href="home.html">Home</a>
+            <a class="nav-item" href="himanshu/medical_project.html">Pharmacy</a class="nav-item">
+            <a class="nav-item" href="location.html">Locations</a class="nav-item">
+            <a class="nav-item" href="aboutdoctors.html">Doctors</a class="nav-item">
+            <a class="nav-item" href="Upcoming Events Second.html">Events</a class="nav-item"> 
+      </div>
+
+      <div class="site-main">
+
+        <div class="main-slider" style="background-image: url('addon/slide1.jpg'); background-size:cover;height:60vh">
+          <h2 class="slider-heading" style="color:white">We Care, <br> Because We Love!</h2>
+         
+        </div>
+
+        <div class="main-actionbar">
+
+          <div class="listmain1">
+            <h2>Our Doctors</h2>
+            <span>Choose by name, specility, city and more.</span><br><br>
+            <a href="aboutdoctors.html"><button>FIND A DOCTOR</button></a>
+          </div>
+
+          <div class="listmain1" >
+            <h2>Appointments</h2>
+            <span>Click in, walk in or call us anytime and anywhere.</span><br><br>
+            <a href="Appointment.html"><button>BOOK APPOINTMENTS</button></a>
+          </div>
+
+
+          <div class="listmain1">
+            <h2>Directions</h2>
+            <span>Find maps and more for all locations.</span><br><br>
+            <a href="location.html"><button>GET DIRECTIONS</button></a>
+          </div>
+
+        </div>
+
+        <section style="background-image: url('addon/home-story-4.jpg');background-size: cover;height: 400px;">
+          <div style="position: relative;color:white;top:200px;left:30px">
+            <div style="box-sizing:border-box; color: #fff;font-weight: 400;display: block; font-family: Arial; font-size:14px;  text-size-adjust:100%;">
+              <h2 style="font-size:35px">Breakthrough care now in over 200 locations near you.</h2>
+              <p class="hide-for-sm">With the additions of KishHealth System and MarianJoy Rehabilitation Hospital, NM care is closer than ever.</p>
+            </div>
+            <a href="location.html" style="text-decoration:none; color: white; display:inline-block;text-align: center; text-transform: uppercase; line-height: inherit; padding: .75em 1.5em ; border: 1px solid transparent; border-radius: 2px; transition:all .25s; background-color:#00778a;" title="See Our Locations">See Our Locations</a>
+          </div>
+     
+        </section>
+        
+
+
+        <div class="main-gallery" id='demo'>
+          <div class="gallery-ex">
+            <div class="counter" id="demo1" style="font-size:60px;color:#0076bf;">#1</div>
+            <p>NORTHWESTERN MEMORIAL HOSPITAL RANKED 1ST IN ILLINOIS</p>
+          </div>
+
+          <!-- <div class="vbar"></div> -->
+
+          <div class="gallery-ex">
+            <div class="counter"  id="demo2" style="font-size:60px;color:#0076bf;">4,000</div>
+            <p>PRACTICING PHYSICIANS</p>
+          </div>
+
+          <!-- <div class="vbar"></div> -->
+
+          <div class="gallery-ex">
+            <div class="counter" id="demo3" style="font-size:60px;color:#0076bf;padding-bottom:22px;">4</div>
+            <p>NORTHWESTERN MEDICINE HOSPITAL TO RECIEVE MAGNET GWG</p>
+          </div>
+
+          <!-- <div class="vbar"></div> -->
+
+          <div class="gallery-ex">
+            <div class="counter"  id="demo4" style="font-size:60px;color:#0076bf;padding-bottom:20px;">30,00</div>
+            <p>EMPLOYEES READY TO SURVE YOU</p>
+          </div>
+
+        </div>
+
+        
+        <script>
+          
+
+
+          var z = 3;
+          function myfun(){
+            if(z >1)
+            {
+          var myVar = setInterval(myTimer, .01);
+          var d = 0;
+          var a = 0;
+          var b = 0;
+          var c = 0;
+          function myTimer() {
+              document.getElementById("demo1").innerHTML = "#"+d;
+              d++;
+              if(d == 555)
+              {
+                clearInterval(myVar);
+                document.getElementById("demo1").innerHTML ="#1"
+              }
+          }
+          var myVar1 = setInterval(myTimer1, .01);
+          function myTimer1() {
+              document.getElementById("demo2").innerHTML = a;
+              a++;
+              if(a == 555)
+              {
+                clearInterval(myVar1);
+                document.getElementById("demo2").innerHTML ="4,000"
+              }
+          }
+          var myVar2 = setInterval(myTimer2, .01);
+          function myTimer2() {
+              document.getElementById("demo3").innerHTML = "#"+b;
+              b++;
+              if(b == 555)
+              {
+                clearInterval(myVar2);
+                document.getElementById("demo3").innerHTML ="5th"
+              }
+          }
+          var myVar3 = setInterval(myTimer3, .01);
+          function myTimer3() {
+              document.getElementById("demo4").innerHTML = "#"+c;
+              c++;
+              if(c == 555)
+              {
+                clearInterval(myVar3);
+                document.getElementById("demo4").innerHTML ="3,000"
+              }
+          }}
+          z--;
+          }
+
+          var scrd = 0;
+          function check(){
+          
+            if($(window).scrollTop() >= 300 && scrd == 0) {
+              myfun();
+              scrd = 1;
+            }
+          
+          }
+          </script>
+          
+
+          
+
+          <div class="main-content">
+            <div class="content2">
+              <img src="addon/patients.png" alt="patients image" style="height:50px;margin:1rem;">
+              <h1 style="line-height:10px;margin:1rem;">EMERGENCY</h1>
+              <a href="emergency.html"><button style="margin:1rem;background-color:#0078bf;padding:10px; border-color:#0078bf; color:#fff; box-shadow:10px #0078bf; min-width:300px;">Click Here</button></a>
+              <p style="margin:1rem;padding:0; font-size:14px;word-spacing:.01px;line-height:20px;font-family: monospace;">
+              <a>Parking</a>  &nbsp; <a>Billing & Insurance</a>  &nbsp; <a>Medical Records</a> <br>
+              <a>Express Care Online</a> &nbsp; <a>MyChart</a> &nbsp; <a>Online Second Opinion</a> <br>
+                            <a>Online Bill Pay</a> &nbsp; <a>MyImages</a>
+              </p>
+            </div>
+
+            <div class="content2">
+              <img src="addon/doctor.png" alt="doctor_logo" style="height:50px;margin:1rem;">
+              <h1 style="line-height:10px;margin:1rem;">UPCOMING EVENTS</h1>
+              <a href="Upcoming Events Second.html"><button style="margin:1rem;background-color:#0078bf;padding:10px; border-color:#0078bf; color:#fff; box-shadow:10px #0078bf; min-width:300px;">Click Here</button></a>
+              <p style="margin:1rem;padding:0; font-size:14px;word-spacing:0.01px;line-height:20px;font-family: monospace;">
+                <a>Refer a Patient</a> &nbsp; <a>Education</a> &nbsp; <a>Research</a> <br>
+                <a>Physician Recruitment</a> &nbsp; <a>DrConnect</a> &nbsp; <a>MyPractice</a> <br>
+                          <a>eRadiology</a> &nbsp; <a>Critical Care Transport</a>
+              </p>
+            </div>
+
+          </div>
+
+
+        </div>
+        <footer>
+          <img src="addon/footer.png" alt="" style="width:80%;">
+
+        </footer>
+    </div>
+  
+
+   
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+<!-- <style>
+
+
+
+
+}
+/* width */
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+::
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #0078bf;
+    border-radius: 7px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #0045bf;
+}
+
+</style>
+
+
+
+
+
+
+
+
+  <div class="main2"style="padding-top:70px;padding-bottom:0;">
+    <div class="innermain2" style="padding:30px;padding-bottom:0;">
+    <div class="content2" style="float:left;padding-left:20px;padding-right:0;border-right:1px solid #aaa;padding-bottom:0;">
+      <img src="addon/patients.png" alt="patients image" style="padding-top: 5px;height:46.75615px; width:50px;">
+    <h1 style="line-height:10px;">EMERGENCY</h1>
+    <center><a href="emergency.html"><button style="background-color:#0078bf;padding:10px; border-color:#0078bf; color:#fff; box-shadow:10px #0078bf; min-width:300px;">Click Here</button></a>
+    </center><br>
+    <pre style="padding:0; font-size:14px;margin-top:-10px;word-spacing:.01px;line-height:20px;">
+    <a>Parking</a>   <a>Billing & Insurance</a>   <a>Medical Records</a>
+    <a>Express Care Online</a>  <a>MyChart</a>  <a>Online Second Opinion</a>
+    <a>Online Bill Pay</a>  <a>MyImages</a>
+  </pre>
+  </div>
+    <div class="content2" style="float:right;padding-right:20px;padding-left:0;padding-bottom: 0;border-left:1px solid #ddd; margin-top:-23%;">
+      <img src="addon/doctor.png" alt="doctor_logo" style="padding-top:5px;height:46.75615px; width:46px;">
+    <h1 style="line-height:10px;">UPCOMING EVENTS</h1>
+    <center><a href="Upcoming Events Second.html"><button style="background-color:#0078bf;padding:10px; border-color:#0078bf; color:#fff; box-shadow:10px #0078bf; min-width:300px;">Click Here</button></a>
+    </center><br>
+    <pre style="padding:0; font-size:14px;margin-top:-10px;word-spacing:0.01px;line-height:20px;">
+    <a>Refer a Patient</a>  <a>Education</a>  <a>Research</a>
+    <a>Physician Recruitment</a>  <a>DrConnect</a>  <a>MyPractice</a>
+    <a>eRadiology</a>  <a>Critical Care Transport</a>
+  </pre>
+  </div>
+  </div>
+</div>
+</body>
+</html> -->

@@ -1,0 +1,817 @@
+<html>
+<head>
+	<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+	</head>
+<style>
+	    @import url("http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,400italic");
+    @import url("//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css");
+    body {
+		padding: 60px 0px;
+		background-color: rgb(220, 220, 220);
+	}
+
+    .event-list {
+		list-style: none;
+		font-family: 'Lato', sans-serif;
+		margin: 0px;
+		padding: 0px;
+	}
+	.event-list > li {
+		background-color: rgb(255, 255, 255);
+		box-shadow: 0px 0px 5px rgb(51, 51, 51);
+		box-shadow: 0px 0px 5px rgba(51, 51, 51, 0.7);
+		padding: 0px;
+		margin: 0px 0px 20px;
+	}
+	.event-list > li > time {
+		display: inline-block;
+		width: 100%;
+		color: rgb(255, 255, 255);
+		background-color: rgb(197, 44, 102);
+		padding: 5px;
+		text-align: center;
+		text-transform: uppercase;
+	}
+	.event-list > li:nth-child(even) > time {
+		background-color: rgb(165, 82, 167);
+	}
+	.event-list > li > time > span {
+		display: none;
+	}
+	.event-list > li > time > .day {
+		display: block;
+		font-size: 56pt;
+		font-weight: 100;
+		line-height: 1;
+	}
+	.event-list > li time > .month {
+		display: block;
+		font-size: 24pt;
+		font-weight: 900;
+		line-height: 1;
+	}
+	.event-list > li > img {
+		width: 100%;
+	}
+	.event-list > li > .info {
+		padding-top: 5px;
+		text-align: center;
+	}
+	.event-list > li > .info > .title {
+		font-size: 17pt;
+		font-weight: 700;
+		margin: 0px;
+	}
+	.event-list > li > .info > .desc {
+		font-size: 13pt;
+		font-weight: 300;
+		margin: 0px;
+	}
+	.event-list > li > .info > ul,
+	.event-list > li > .social > ul {
+		display: table;
+		list-style: none;
+		margin: 10px 0px 0px;
+		padding: 0px;
+		width: 100%;
+		text-align: center;
+	}
+	.event-list > li > .social > ul {
+		margin: 0px;
+	}
+	.event-list > li > .info > ul > li,
+	.event-list > li > .social > ul > li {
+		display: table-cell;
+		cursor: pointer;
+		color: rgb(30, 30, 30);
+		font-size: 11pt;
+		font-weight: 300;
+        padding: 3px 0px;
+	}
+    .event-list > li > .info > ul > li > a {
+		display: block;
+		width: 100%;
+		color: rgb(30, 30, 30);
+		text-decoration: none;
+	}
+    .event-list > li > .social > ul > li {
+        padding: 0px;
+    }
+    .event-list > li > .social > ul > li > a {
+        padding: 3px 0px;
+	}
+	.event-list > li > .info > ul > li:hover,
+	.event-list > li > .social > ul > li:hover {
+		color: rgb(30, 30, 30);
+		background-color: rgb(200, 200, 200);
+	}
+	.facebook a,
+	.twitter a,
+	.google-plus a {
+		display: block;
+		width: 100%;
+		color: rgb(75, 110, 168) !important;
+	}
+	.twitter a {
+		color: rgb(79, 213, 248) !important;
+	}
+	.google-plus a {
+		color: rgb(221, 75, 57) !important;
+	}
+	.facebook:hover a {
+		color: rgb(255, 255, 255) !important;
+		background-color: rgb(75, 110, 168) !important;
+	}
+	.twitter:hover a {
+		color: rgb(255, 255, 255) !important;
+		background-color: rgb(79, 213, 248) !important;
+	}
+	.google-plus:hover a {
+		color: rgb(255, 255, 255) !important;
+		background-color: rgb(221, 75, 57) !important;
+	}
+
+	@media (min-width: 768px) {
+		.event-list > li {
+			position: relative;
+			display: block;
+			width: 100%;
+			height: 120px;
+			padding: 0px;
+		}
+		.event-list > li > time,
+		.event-list > li > img  {
+			display: inline-block;
+		}
+		.event-list > li > time,
+		.event-list > li > img {
+			width: 120px;
+			float: left;
+		}
+		.event-list > li > .info {
+			background-color: rgb(245, 245, 245);
+			overflow: hidden;
+		}
+		.event-list > li > time,
+		.event-list > li > img {
+			width: 120px;
+			height: 120px;
+			padding: 0px;
+			margin: 0px;
+		}
+		.event-list > li > .info {
+			position: relative;
+			height: 120px;
+			text-align: left;
+			padding-right: 40px;
+		}
+		.event-list > li > .info > .title,
+		.event-list > li > .info > .desc {
+			padding: 0px 10px;
+		}
+		.event-list > li > .info > ul {
+			position: absolute;
+			left: 0px;
+			bottom: 0px;
+		}
+		.event-list > li > .social {
+			position: absolute;
+			top: 0px;
+			right: 0px;
+			display: block;
+			width: 40px;
+		}
+        .event-list > li > .social > ul {
+            border-left: 1px solid rgb(230, 230, 230);
+        }
+		.event-list > li > .social > ul > li {
+			display: block;
+            padding: 0px;
+		}
+		.event-list > li > .social > ul > li > a {
+			display: block;
+			width: 40px;
+			padding: 10px 0px 9px;
+		}
+	}
+
+
+
+
+
+
+	body{
+	padding:0;
+	margin: 0;
+}
+.join {
+		font-family: cursive;
+		float:right;
+		margin-top: -10px;
+		margin-right: 10px;
+
+}
+.share1:hover {
+	p{
+		margin-right: 20px;
+	}
+	z-index: 1;
+	transform: scale(2);
+}
+		.vl {
+		border-left: 6px solid rgb(12,15,128);
+		height: 700px;
+			margin-top: -230px;
+			margin-left:200px;
+		}
+
+
+.nav {
+		box-sizing: border-box;
+		list-style-type: none;
+		margin: -5px;
+		margin-top: -8px;
+		padding: 0;
+		overflow: hidden;
+		background-color: #0078bf;
+		top: 0;
+		position:sticky;
+		z-index:99;
+}
+.bar {
+		float: left;
+		display: block;
+		color: white;
+		text-align: center;
+		padding: 14px 16px;
+		text-decoration: none;
+}
+.bar:hover {
+	/*  background-color: #005588;*/
+		border-bottom: 2px solid #fff;
+		padding-bottom: 3px;
+}
+
+.login{
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	border: 1px solid rgb(255,185,0);
+	background-color: rgb(255,185,0);
+}
+.login:hover{
+	transform: scale(.95);
+	background-color: rgb(255,155,0);
+	border: 1px solid rgb(255,155,0);
+}
+li{
+	list-style-type: none;
+}
+body {font-family: Arial, Helvetica, sans-serif;
+overflow-x: hidden;}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+		width: 55%;
+		padding: 12px 20px;
+		margin: 8px 0;
+		display: inline-block;
+		border:none;
+		border-bottom: 1px solid #ccc;
+		box-sizing: border-box;
+
+}
+
+/* Set a style for all buttons */
+/* Extra styles for the cancel button */
+.cancelbtn {
+		width: auto;
+		padding: 10px 18px;
+		background-color: #f44336;
+		margin-right: -300px;
+}
+
+
+#loginside{
+	background-color: #4CAF50;
+		color: white;
+		padding: 14px 20px;
+		margin: 8px 0;
+		border: none;
+		cursor: pointer;
+		width: 100%;
+}
+/* Center the image and position the close button */
+.imgcontainer {
+		text-align: center;
+		margin: 20px 0 12px 0;
+		position: relative;
+}
+
+img.avatar {
+		width: 30%;
+		border-radius: 50%;
+		height: 80%;
+}
+
+.container {
+		padding: 16px;
+}
+
+span.psw {
+		float: right;
+		padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+		display: none; /* Hidden by default */
+		position: fixed; /* Stay in place */
+		z-index: 1; /* Sit on top */
+		left: 0;
+		top: 0;
+
+		width: 100%; /* Full width */
+		height: 120%; /* Full height */
+		overflow: hidden; /* Enable scroll if needed */
+		background-color: rgb(0,0,0); /* Fallback color */
+		background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+		padding-top: 0px;
+		margin-top: -20px;
+
+}
+
+/* Modal Content/Box */
+.modal-content {
+		background-color: #fefefe;
+		margin: 5% auto 10% auto; /* 5% from the top, 15% from the bottom and centered */
+		border: 1px solid #888;
+		width: 40%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+		position: absolute;
+		right: 25px;
+		top: 0;
+		color: #000;
+		font-size: 35px;
+		font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+		color: red;
+		cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+		-webkit-animation: animatezoom 0.6s;
+		animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+		from {-webkit-transform: scale(0)}
+		to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+		from {transform: scale(0)}
+		to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+		span.psw {
+			 display: block;
+			 float: none;
+		}
+		.cancelbtn {
+			 width: 100%;
+		}
+}
+body{
+	background-color: white;
+}
+div{
+	overflow-x: hidden;
+
+}
+	</style>
+	<body>
+
+
+		<!--Css for above-->
+
+				<div class ="join"><!--socila media-->
+		    <p style="cursor:default">Join us...
+		    <a  href="https://www.facebook.com" style="padding-right:2px;"><img class="share1" src="C:\Users\SiDd\Documents\Html Project\addons\fa.jpg" alt="facbook logo" height="20px"></a>
+		    <a  href="https://www.youtube.com"> <img class="share1"  src="C:\Users\SiDd\Documents\Html Project\addons\youtube1.png" alt="facbook logo" height="20px"></a>
+		    <a  href="https://www.twiiter.com"> <img  class="share1" src="C:\Users\SiDd\Documents\Html Project\addons\twitter.jpg" alt="facbook logo" height="20px"></a>
+		    <a  href="https://www.linkdin.com"> <img  class="share1" src="C:\Users\SiDd\Documents\Html Project\addons\linkdin.png" alt="facbook logo" height="20px"></a>
+		  </p></div>
+
+
+
+				<!--CODE FOR LOGO AND HOSPITAL NAME-->
+		  <div class="upside" style="padding:5px;">
+		    <img src="addon/temptlocation.jpg" alt="" style="height:50px;">
+		    <h1 style="margin-left:5%;margin-top:-4%;">OZONE HEALTH CLINICS</h1>
+		  </div>
+
+
+
+
+
+
+
+				<!--CODE FOR NAVIGATION BAR-->
+		  <div class="nav">
+				<li><a href="home.html" class="bar active">Home</a></li>
+		    <li><a href="location.html" class="bar">Locations</a></li>
+		    <li><a href="himanshu/medical_project.html" class="bar">Pharmacy</a></li>
+		    <li><a href="Upcoming Events Second.html" class="bar">Our Events</a></li>
+		    <li><a href="aboutdoctors.html" class="bar">Our Doctors</a></li>
+		    <button onclick="document.getElementById('id01').style.display='block'" class="login" style="float:right; background-color:orange;">Login/Sign in</button>
+		  </div>
+		<!--navigation BAR ends-->
+		<center>
+		<div id="id01" class="modal" style="z-index:100;">
+
+		  <form class="modal-content animate" action="/action_page.php">
+		    <div class="imgcontainer">
+		      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+		      <img src="C:\Users\SiDd\Documents\Html Project\addons\logine.png" alt="Avatar" class="avatar">
+		    </div>
+
+		    <div class="container">
+		      <label for="uname"><b>Username</b></label>
+		      <input type="text" placeholder="Enter Username" name="uname" required>
+		<br>
+		      <label for="psw"><b>Password</b></label>
+		      <input type="password" placeholder="Enter Password" name="psw" required>
+		      <li class="psw" style="font-size:10px;text-align:left;margin-left:60px;"><a href="#">Forgot password</a></li>
+		      <button id="loginside" type="submit">Login</button>
+		      <label>
+		        <input type="checkbox" checked="checked" name="remember"> Remember me
+		      </label>
+		    </div>
+
+		    <div class="container" style="background-color:#f1f1f1">
+		      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+
+		    </div>
+		  </form>
+		</div>
+
+		<script>
+		// Get the modal
+		var modal = document.getElementById('id01');
+
+		// When the user clicks anywhere outside of the modal, close it
+		window.onclick = function(event) {
+		    if (event.target == modal) {
+		        modal.style.display = "none";
+		    }
+		}
+		</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<div class="container">
+		<div class="row">
+			<div class="[ col-xs-12 col-sm-offset-2 col-sm-8 ]">
+				<ul class="event-list">
+					<li>
+						<time datetime="2014-07-20">
+							<span class="day">4</span>
+							<span class="month">Feb</span>
+							<span class="year">2018</span>
+							<span class="time">ALL DAY</span>
+						</time>
+						<div class="info">
+							<h2 class="title">More To Give Campaign</h2>
+							<p class="desc">Annual Event For Promotion Of Organ Donation<br>
+											Venue: Ozone Open Air Auditorium<br>
+								Timings: From 9 AM Onwards</p>
+							<button style="color: blanchedalmond;background-color: brown;height: 30px;width: 100px;border-radius: 25px;float: left">Book my seat</button>
+
+						</div>
+						<div class="social">
+							<ul>
+								<li class="facebook" style="width:33%;"><a href="#facebook"><span class="fa fa-facebook"></span></a></li>
+								<li class="twitter" style="width:34%;"><a href="#twitter"><span class="fa fa-twitter"></span></a></li>
+								<li class="google-plus" style="width:33%;"><a href="#google-plus"><span class="fa fa-google-plus"></span></a></li>
+							</ul>
+						</div>
+					</li>
+
+					<li>
+						<time datetime="2014-07-20 0000">
+							<span class="day">15</span>
+							<span class="month">March</span>
+							<span class="year">2018</span>
+							<span class="time">12:00 AM</span>
+						</time>
+						<div class="info">
+							<h2 class="title">Ozone Training Programme</h2>
+							<p class="desc">Annual Training Programme For Future Doctors Of Country<br>
+											Venue: Ozone School Of Medical Sciences<br>
+											Timings: From 9 AM Onwards</p>
+								<button style="color: blanchedalmond;background-color: brown;height: 30px;width: 100px;border-radius: 25px;float: left">Book my seat</button>
+						</div>
+						<div class="social">
+							<ul>
+								<li class="facebook" style="width:33%;"><a href="#facebook"><span class="fa fa-facebook"></span></a></li>
+								<li class="twitter" style="width:34%;"><a href="#twitter"><span class="fa fa-twitter"></span></a></li>
+								<li class="google-plus" style="width:33%;"><a href="#google-plus"><span class="fa fa-google-plus"></span></a></li>
+							</ul>
+						</div>
+					</li>
+
+					<li>
+						<time datetime="2014-07-20 2000">
+							<span class="day">30</span>
+							<span class="month">March</span>
+							<span class="year">2018</span>
+							<span class="time">8:00 PM</span>
+						</time>
+						<div class="info">
+							<h2 class="title">Arrival Of Health Minister</h2>
+							<p class="desc">Inauguration Of Health Programme By Honb. Health Minister<br>
+											Venue: Ozone Open Air Auditorium<br>
+											Timings: Arrival At 2 PM  Onwards</p>
+								<button style="color: blanchedalmond;background-color: brown;height: 30px;width: 100px;border-radius: 25px;float: left">Book my seat</button>
+						</div>
+						<div class="social">
+							<ul>
+								<li class="facebook" style="width:33%;"><a href="#facebook"><span class="fa fa-facebook"></span></a></li>
+								<li class="twitter" style="width:34%;"><a href="#twitter"><span class="fa fa-twitter"></span></a></li>
+								<li class="google-plus" style="width:33%;"><a href="#google-plus"><span class="fa fa-google-plus"></span></a></li>
+							</ul>
+						</div>
+					</li>
+
+						<li>
+						<time datetime="2014-07-20 0000">
+							<span class="day">30</span>
+							<span class="month">April</span>
+							<span class="year">2018</span>
+							<span class="time">12:00 AM</span>
+						</time>
+						<div class="info">
+							<h2 class="title">Health Agenda Conference</h2>
+							<p class="desc">Conference to prioritise Ozone's Healthcare Agenda for country's progress.<br>
+											Venue: Ozone Healthcare Auditorium<br>
+											Timings: From 2 PM Onwards</p>
+								<button style="color: blanchedalmond;background-color: brown;height: 30px;width: 100px;border-radius: 25px;float: left">Book my seat</button>
+						</div>
+						<div class="social">
+							<ul>
+								<li class="facebook" style="width:33%;"><a href="#facebook"><span class="fa fa-facebook"></span></a></li>
+								<li class="twitter" style="width:34%;"><a href="#twitter"><span class="fa fa-twitter"></span></a></li>
+								<li class="google-plus" style="width:33%;"><a href="#google-plus"><span class="fa fa-google-plus"></span></a></li>
+							</ul>
+						</div>
+					</li>
+
+						<li>
+						<time datetime="2014-07-31 1600">
+							<span class="day">5</span>
+							<span class="month">May</span>
+							<span class="year">2018</span>
+							<span class="time">4:00 PM</span>
+						</time>
+									<div class="info">
+							<h2 class="title">Mask Distribution Camp</h2>
+							<p class="desc">Ozone Healthcare distibutes more than 10000 masks against Smog<br>
+											Venue: 10 Government Hospitals In Different Cities<br>
+											Timings: Yet To Be Decide</p>
+											<button style="color: blanchedalmond;background-color: brown;height: 30px;width: 100px;border-radius: 25px;float: left">Book my seat</button>
+						</div>
+						<div class="social">
+							<ul>
+								<li class="facebook" style="width:33%;"><a href="#facebook"><span class="fa fa-facebook"></span></a></li>
+								<li class="twitter" style="width:34%;"><a href="#twitter"><span class="fa fa-twitter"></span></a></li>
+								<li class="google-plus" style="width:33%;"><a href="#google-plus"><span class="fa fa-google-plus"></span></a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<time datetime="2014-07-20 0000">
+							<span class="day">30</span>
+							<span class="month">May</span>
+							<span class="year">2018</span>
+							<span class="time">12:00 AM</span>
+						</time>
+						<div class="info">
+							<h2 class="title">Emotional Wellness Programme</h2>
+							<p class="desc">Collabortaion with wayForward for emotional wellness programme regarding workplace stress.<br>
+											Venue: wayForward Office Auditorium<br>
+											Timings: From 12 PM Onwards</p>
+								<button style="color: blanchedalmond;background-color: brown;height: 30px;width: 100px;border-radius: 25px;float: left">Book my seat</button>
+						</div>
+						<div class="social">
+							<ul>
+								<li class="facebook" style="width:33%;"><a href="#facebook"><span class="fa fa-facebook"></span></a></li>
+								<li class="twitter" style="width:34%;"><a href="#twitter"><span class="fa fa-twitter"></span></a></li>
+								<li class="google-plus" style="width:33%;"><a href="#google-plus"><span class="fa fa-google-plus"></span></a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<time datetime="2014-07-20 0000">
+							<span class="day">7</span>
+							<span class="month">June</span>
+							<span class="year">2018</span>
+							<span class="time">12:00 AM</span>
+						</time>
+						<div class="info">
+							<h2 class="title">National Psychology Competition</h2>
+							<p class="desc">Ozone to organise the first ever National Level Competition On Psychology.<br>
+											Venue: Ozone School Of Medical Sciences<br>
+											Timings: From 9 AM Onwards<br></p>
+								<button style="color: blanchedalmond;background-color: brown;height: 30px;width: 100px;border-radius: 25px;float: left">Book my seat</button>
+						</div>
+						<div class="social">
+							<ul>
+								<li class="facebook" style="width:33%;"><a href="#facebook"><span class="fa fa-facebook"></span></a></li>
+								<li class="twitter" style="width:34%;"><a href="#twitter"><span class="fa fa-twitter"></span></a></li>
+								<li class="google-plus" style="width:33%;"><a href="#google-plus"><span class="fa fa-google-plus"></span></a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<time datetime="2014-07-31 1600">
+							<span class="day">30</span>
+							<span class="month">June</span>
+							<span class="year">2018</span>
+							<span class="time">4:00 PM</span>
+						</time>
+									<div class="info">
+							<h2 class="title">Inauguration of Wall Of Tribute</h2>
+							<p class="desc">Ozone Healthcare dedicates Wall Of Tribute for organ donors.<br>
+											Venue: Ozone Healthcare And Group Of Hospitals<br>
+											Timings: From 5 PM Onwards.<br></p>
+											<button style="color: blanchedalmond;background-color: brown;height: 30px;width: 100px;border-radius: 25px;float: left">Book my seat</button>
+						</div>
+						<div class="social">
+							<ul>
+								<li class="facebook" style="width:33%;"><a href="#facebook"><span class="fa fa-facebook"></span></a></li>
+								<li class="twitter" style="width:34%;"><a href="#twitter"><span class="fa fa-twitter"></span></a></li>
+								<li class="google-plus" style="width:33%;"><a href="#google-plus"><span class="fa fa-google-plus"></span></a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<time datetime="2014-07-31 1600">
+							<span class="day">8</span>
+							<span class="month">August</span>
+							<span class="year">2018</span>
+							<span class="time">4:00 PM</span>
+						</time>
+								<div class="info">
+							<h2 class="title">World Cardiologist Conference</h2>
+							<p class="desc">Annual Conference of Cardiologist and for Future of Heart Transplantation<br>
+											Venue: Ozone Healthcare Open Auditorium<br>
+											Timings: From 11 AM Onwards<br></p>
+						</div>
+						<div class="social">
+							<ul>
+								<li class="facebook" style="width:33%;"><a href="#facebook"><span class="fa fa-facebook"></span></a></li>
+								<li class="twitter" style="width:34%;"><a href="#twitter"><span class="fa fa-twitter"></span></a></li>
+								<li class="google-plus" style="width:33%;"><a href="#google-plus"><span class="fa fa-google-plus"></span></a></li>
+							</ul>
+						</div>
+					</li>
+
+
+					<li>
+						<time datetime="2014-07-31 1600">
+							<span class="day">15</span>
+							<span class="month">August</span>
+							<span class="year">2018</span>
+							<span class="time">4:00 PM</span>
+						</time>
+									<div class="info">
+							<h2 class="title">Health Camp</h2>
+							<p class="desc">Annual Free Health Camp in the cities on the occasion of Independence Day.<br>
+											Venue: Government Hospital In Each Respective City<br></p>
+											Timings: Yet To Be Decide.
+						</div>
+						<div class="social">
+							<ul>
+								<li class="facebook" style="width:33%;"><a href="#facebook"><span class="fa fa-facebook"></span></a></li>
+								<li class="twitter" style="width:34%;"><a href="#twitter"><span class="fa fa-twitter"></span></a></li>
+								<li class="google-plus" style="width:33%;"><a href="#google-plus"><span class="fa fa-google-plus"></span></a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<time datetime="2014-07-20 0000">
+							<span class="day">30</span>
+							<span class="month">August</span>
+							<span class="year">2018</span>
+							<span class="time">12:00 AM</span>
+						</time>
+						<div class="info">
+							<h2 class="title">7th International Patient Safety Conference</h2>
+							<p class="desc">7th International Patient Safety Conference to learn patient safety experts across the globe.<br>
+											Venue: Ozone Healthcare Open Audtiorium<br>
+											Timings: From 11 AM Onwards<br> </p>
+						</div>
+						<div class="social">
+							<ul>
+								<li class="facebook" style="width:33%;"><a href="#facebook"><span class="fa fa-facebook"></span></a></li>
+								<li class="twitter" style="width:34%;"><a href="#twitter"><span class="fa fa-twitter"></span></a></li>
+								<li class="google-plus" style="width:33%;"><a href="#google-plus"><span class="fa fa-google-plus"></span></a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<time datetime="2014-07-31 1600">
+							<span class="day">30</span>
+							<span class="month">Sept</span>
+							<span class="year">2018</span>
+							<span class="time">4:00 PM</span>
+						</time>
+									<div class="info">
+							<h2 class="title">Meetup for NFCIC</h2>
+							<p class="desc">Annual meetup for National Forum And Conference On Infection Control 2018<br>
+											Venue: Ozone Healthcare And Group Of Hospitals.<br>
+											Timings: From 11 AM Onwards.</p>
+						</div>
+						<div class="social">
+							<ul>
+								<li class="facebook" style="width:33%;"><a href="#facebook"><span class="fa fa-facebook"></span></a></li>
+								<li class="twitter" style="width:34%;"><a href="#twitter"><span class="fa fa-twitter"></span></a></li>
+								<li class="google-plus" style="width:33%;"><a href="#google-plus"><span class="fa fa-google-plus"></span></a></li>
+							</ul>
+						</div>
+					</li>
+
+					<li>
+						<time datetime="2014-07-20 0000">
+							<span class="day">18</span>
+							<span class="month">Oct</span>
+							<span class="year">2018</span>
+							<span class="time">12:00 AM</span>
+						</time>
+						<div class="info">
+							<h2 class="title">3rd Cancer Conclave</h2>
+							<p class="desc">3rd Cancer Conclave and Cancer CI by Ozone Cancer Institute for the future of Cancer Treatment.<br>
+											Venue: Ozone Cancer Institute And Hospitals.<br>
+											Timings: From 5 PM Onwards<br></p>
+						</div>
+						<div class="social">
+							<ul>
+								<li class="facebook" style="width:33%;"><a href="#facebook"><span class="fa fa-facebook"></span></a></li>
+								<li class="twitter" style="width:34%;"><a href="#twitter"><span class="fa fa-twitter"></span></a></li>
+								<li class="google-plus" style="width:33%;"><a href="#google-plus"><span class="fa fa-google-plus"></span></a></li>
+							</ul>
+						</div>
+					</li>
+
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	</body>
+</html>

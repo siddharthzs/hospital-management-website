@@ -1,0 +1,9 @@
+var x = 6;
+var y = 5;
+var z = x + y;
+document.getElementById('f').innerHTML = +z;
+function my() {"use strict"; document.getElementById('hi').innerHTML = Date(); }
+function you() {"use strict"; document.getElementById('yo').style.fontSize = '40px'; }
+function your() {"use strict"; document.getElementById('ye').style.display = 'block'; }
+function why() {"use strict"; document.getElementById('bye').src = '2387167-will_smith.jpg'; }
+function what() {"use strict"; document.getElementById('ho').src = '453096_lord-shiva-creative-hd-wallpapers-for-free-download-lord-shiva-hd_1600x1000_h.jpg'; }

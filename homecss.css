@@ -1,0 +1,259 @@
+body{
+  padding:0;
+  margin: 0;
+}
+
+.nav {
+
+    box-sizing: border-box;
+    list-style-type: none;
+    margin: -5px;
+    margin-top: -8px;
+    padding: 0;
+    overflow: hidden;
+    background-color: #0078bf;
+    top: 0;
+    position:sticky;
+    z-index:99;
+}
+.bar {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.bar:hover {
+  /*  background-color: #005588;*/
+    border-bottom: 2px solid #fff;
+    padding-bottom: 3px;
+}
+
+.login{
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  border: 1px solid rgb(255,185,0);
+  background-color: rgb(255,185,0);
+}
+.login:hover{
+  transform: scale(.95);
+  background-color: rgb(255,155,0);
+  border: 1px solid rgb(255,155,0);
+}
+
+.slideshow{
+  margin: 0 -6.5px 0 0;
+  overflow-x: hidden;
+}
+.hero__title{
+  font-family: Baskerville Old Face,book antiqua,californian,Arial Narrow ;
+  position: absolute;
+  font-size: 50px;
+  overflow: visible;
+  text-align: left;
+  z-index: 1;
+  color: white;
+    top: 200px;
+    left: 16px;
+}
+
+.actionbar{
+  background-color: #0078bf;
+  margin-left: -20px;
+  margin-top: -10px;
+  margin-right: -20px;
+  padding: 20px 20px 5px 20px;
+  align-content: center;
+  align-items: center;
+}
+.listmain1 , .listmain2 , .listmain3{
+  text-align: center;
+  display: block;
+  border:transparent;
+  padding-bottom: 10px;
+  padding: 5px 10px 10px 10px;
+  border-radius: 5px;
+  max-width: 25%;
+  /*border: 1px solid #0078bf;*/
+  box-shadow: 1px 1px 35px #005588;
+  overflow-x: hidden;
+}
+.listmain1:hover, .listmain2:hover, .listmain3:hover{
+  border-right: 1px solid #005588;
+  border-bottom: 1px solid #005588;
+  box-shadow: inset;
+}
+
+li{
+  list-style-type: none;
+}
+span{
+  text-align: center;
+  text-decoration: none;
+  color: white;
+
+}
+button{
+  border-radius: 2px;
+  box-shadow: none;
+}
+
+.heading{
+  font-size: 20px;
+  font-family: Calibri light;
+}
+
+
+
+
+/*Css for logon page*/
+body {font-family: Arial, Helvetica, sans-serif;
+overflow-x: hidden;}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 55%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border:none;
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box;
+
+}
+
+/* Set a style for all buttons */
+/* Extra styles for the cancel button */
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+    margin-right: -300px;
+}
+
+
+#loginside{
+  background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+/* Center the image and position the close button */
+.imgcontainer {
+    text-align: center;
+    margin: 20px 0 12px 0;
+    position: relative;
+}
+
+img.avatar {
+    width: 30%;
+    border-radius: 50%;
+    height: 80%;
+}
+
+.container {
+    padding: 16px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+
+    width: 100%; /* Full width */
+    height: 120%; /* Full height */
+    overflow: hidden; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 0px;
+    margin-top: -20px;
+
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 10% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 40%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)}
+    to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+}
+div{
+  overflow-x: hidden;
+
+}
+.content2{
+  align-items: center;
+  align-content: center;
+  font-size: 16px;
+  text-align: center;
+  max-width: 48.01%;
+  min-width: 48.01%;
+  border: 2px solid transparent;
+}
+.main2{
+  box-sizing: border-box;
+  color: rgb(85,85,85);
+  display: block;
+  font-family: Lato, HelveticaNeue-Light;
+  font-size: 16px;
+  line-height: 27px;
+  text-size-adjust: 100%;
+}
